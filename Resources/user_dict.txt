@@ -6,8 +6,10 @@ easy_install 3 eng
 韩玉赏鉴 3 nz
 八一双鹿 3 nz
 台中
-自然语言处理
+自然 1000 nz
+语言处理
 凱特琳 nz
 Edu Trust认证 2000
 Steve Jobs 1000 nr
 Mac OS X 10
+大数据 500 nz

@@ -1,4 +1,5 @@
 using JiebaNet.Segmenter;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,11 +12,17 @@ services.AddControllers();
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen();
 
+var configuration = builder.Configuration;
+
+var directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+Directory.SetCurrentDirectory(directory!);
+
+JiebaNet.Segmenter.ConfigManager.ConfigFileBaseDir = configuration.GetValue<string>("Jieba:ConfigFilesBaseDirectory");
+
 services.AddSingleton(new JiebaSegmenter());
 
-
-var jiebaSegmenter = new JiebaSegmenter();
-jiebaSegmenter.LoadUserDict("userdict.txt");
+//var lazyJiebaSegmenter = new JiebaSegmenter();
+//lazyJiebaSegmenter.LoadUserDict(@"Resources\user_dict.txt");
 //jiebaSegmenter.CutInParallel()
 services.AddSingleton(new JiebaSegmenter());
 

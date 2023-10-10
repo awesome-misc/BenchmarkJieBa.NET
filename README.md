@@ -8,6 +8,25 @@ sudo docker run --name webapi_benchmark -d -p 9090:9090 ikende/beetlex_webapi_be
 ```
 
 
+```json
+
+{
+    "text":"我来到北京清华大学"
+}
+
+```
+
+
+```json
+
+{
+    "text":"小明最近在学习机器学习、自然语言处理、云计算和大数据"
+}
+
+```
+
+
+
 # jieba.NET 是[jieba中文分词](https://github.com/fxsjy/jieba)的.NET版本（C#实现）。
 
 当前版本为0.42.2，基于jieba 0.42，提供与jieba**基本一致**的功能与接口，但不支持其最新的paddle模式。关于jieba的实现思路，可以看看[这篇wiki](https://github.com/anderscui/jieba.NET/wiki/%E7%90%86%E8%A7%A3%E7%BB%93%E5%B7%B4%E5%88%86%E8%AF%8D)里提到的资料。
