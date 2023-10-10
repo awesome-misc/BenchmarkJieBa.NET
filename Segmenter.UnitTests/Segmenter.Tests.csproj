@@ -25,7 +25,14 @@
     <ProjectReference Include="..\..\src\Segmenter\Segmenter.csproj" />
   </ItemGroup>-->
 
-  <ItemGroup>
+	<ItemGroup>
+		<None Include="..\Resources\**\*.*">
+			<Link>Resources\%(RecursiveDir)%(FileName)%(Extension)</Link>
+		</None>
+	</ItemGroup>
+
+
+	<ItemGroup>
     <None Update="Cases\accurate_hmm.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

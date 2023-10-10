@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -11,5 +11,11 @@
     <PackageReference Include="BenchmarkDotNet" Version="0.13.9" />
     <PackageReference Include="jieba.NET" Version="0.42.2" />
   </ItemGroup>
+
+    <ItemGroup>
+	    <None Include="..\ExtraDicts\**\*.*">
+		    <Link>ExtraDicts\%(RecursiveDir)%(FileName)%(Extension)</Link>
+	    </None>
+    </ItemGroup>
 
 </Project>
